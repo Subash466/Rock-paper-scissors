@@ -1,0 +1,153 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,700;1,600&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+ 
+}
+:root{
+  --darkText : hsl(229, 25%, 31%);
+  --scoreText : hsl(229, 64%, 46%);
+  --headerOutline: hsl(217, 16%, 45%);
+}
+body{
+  
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  background-image: linear-gradient(to right, hsl(214, 47%, 23%) , hsl(237, 49%, 15%));
+ 
+}
+.header{
+  background-image:  linear-gradient(to right, hsl(214, 47%, 23%) , hsl(237, 49%, 15%));
+  border: 0.5rem solid var(--headerOutline);
+  margin: 1rem;
+  border-radius: 1rem;
+  
+}
+.header-img{
+  padding: 2rem;
+  margin: 0.5rem;
+}
+.score{
+  float: right;
+  background-color: white;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  color:var(--scoreText) ;
+  width: 120px;
+}
+.user-score{
+  color: var(--darkText);
+  font-size: 2.5rem;
+}
+.section{
+  margin-top: 3rem;
+}
+.you{
+  font-size: 1.5rem;
+  color:white;
+ }
+.comp{
+  font-size: 1.5rem;
+  color:white;
+}
+
+.image-bg{
+  position: relative;
+  top: 10px;
+  left: 10px;
+  z-index: 1;
+}
+.hidden{
+  display: none;
+}
+
+#one{
+  padding: 2rem;
+  border-radius: 10rem;
+  border-top: 1rem solid hsl(349, 71%, 52%);
+  border-bottom:1rem solid hsl(349, 70%, 56%);
+  border-right: 1rem solid hsl(349, 71%, 52%);
+  border-left:1rem solid hsl(349, 70%, 56%);
+  background-color: rgb(216, 216, 216);
+  position:absolute;
+  top: -18px;
+  left: -10px;
+  z-index: 2;
+
+}
+#two{
+  width: 135px;
+  border-radius: 10rem;
+  padding: 2rem;
+  border-top: 1rem solid hsl(230, 89%, 62%);
+  border-bottom:1rem solid hsl(230, 89%, 65%);
+  border-right:1rem solid hsl(230, 89%, 62%);
+  border-left: 1rem solid hsl(230, 89%, 65%);
+  background-color: rgb(216, 216, 216);
+  position:absolute;
+  top: -26px;
+  right: -20px;
+  z-index: 2;
+}
+#three{
+  width: 135px;
+  border-radius: 10rem;
+  padding: 2rem;
+  border-top:1rem solid hsl(39, 89%, 49%);
+  border-bottom:1rem solid hsl(40, 84%, 53%) ;
+  border-right: 1rem solid hsl(39, 89%, 49%) ;
+  border-left: 1rem solid hsl(40, 84%, 53%) ;
+  background-color: rgb(216, 216, 216);
+  position:absolute;
+  bottom: -40px;
+  left: 150px;
+  z-index: 2;
+}
+.click1{
+   color: rgb(216, 216, 216);
+   font-size: 1.5rem;
+   padding: 0.5rem 2rem;
+   border-radius: 1rem;
+   border: 0.2rem solid rgb(216, 216, 216);
+   float: right;
+   margin-top: 3rem;
+}
+.deco{
+  display: table;
+  background-color: rgb(245, 245, 245);
+  padding: 2rem;
+  color: var(--headerOutline);
+  border-radius: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.icon-close{
+  display: inline-flex;
+  position: fixed;
+  width: 15px;
+  margin:2.5rem;
+  margin-left: 19rem;
+  z-index: 2;
+}
+.ans{
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  margin:2rem 0 ;
+}
+.again{
+  display: inline;
+  
+  font-size: 1.5rem;
+  
+}
+.again button{
+  background-color: white;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  color: rgb(228, 39, 39);
+
+}
