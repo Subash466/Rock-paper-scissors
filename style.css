@@ -143,7 +143,6 @@ body{
   color: var(--headerOutline);
   margin:0.8rem;
   margin-left: 14rem;
-  z-index: 2;
 }
 .result{
   font-size: 2rem;
