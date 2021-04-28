@@ -1,27 +1,27 @@
 'use-script'
 
+const userChoice=document.querySelector(".user-choice");
+const computerChoice=document.querySelector(".computer-choice");
+const result=document.querySelector(".result");
+const playAgain=document.querySelector(".play-again");
 const user=document.getElementById('user-img');
-const obj = document.getElementById("com-img");
+const computerImage= document.getElementById("com-img");
 const image=document.querySelector(".image");
 const showRule=document.querySelector(".click");
 const hideRule=document.querySelector(".icon-close");
-const match=document.querySelector(".match");
-const ans=document.querySelector(".ans");
-const again=document.querySelector(".again");
-const paper=document.querySelector(".paper");
+const hideUser=document.querySelector(".paper");
 const userScore=document.querySelector(".user-score");
-const picked=document.querySelector(".you");
-const picked1=document.querySelector(".comp");
+
 
 let score=5;
 userScore.textContent=score;
-let computer1="";
+let computerAnswer="";
 let userAns="";
 function computerSuffle(){
   let computer=Math.floor(Math.random()*3);
-  obj.innerHTML=" ";
+  computerImage.innerHTML=" ";
 if (computer==0){
-   computer1="rock";
+  computerAnswer="rock";
   var pic = document.createElement("img");
   pic.style.backgroundColor=" rgb(216, 216, 216)";
   pic.style.borderTop="1rem solid hsl(349, 71%, 52%)";
@@ -37,7 +37,7 @@ if (computer==0){
   var add = document.getElementById("com-img");
   add.appendChild(pic);
 }else if(computer==1){
-  computer1="scissor";
+  computerAnswer="scissor";
   var pic = document.createElement("img");
   pic.style.backgroundColor=" rgb(216, 216, 216)";
   pic.style.borderTop="1rem solid hsl(39, 89%, 49%)  ";
@@ -54,7 +54,7 @@ if (computer==0){
   add.appendChild(pic);
 }
 else{
-  computer1="paper";
+  computerAnswer="paper";
   var pic= document.createElement("img");
   pic.style.backgroundColor=" rgb(216, 216, 216)";
   pic.style.borderTop="1rem solid hsl(230, 89%, 62%)";
@@ -72,73 +72,65 @@ else{
 }
 }
 function rockClick(){
-  image.style.visibility="hidden";
    userAns="rock";
   computerSuffle();
-  console.log(compare(userAns,computer1));
+  console.log(compare(userAns,computerAnswer));
   var addImage=document.getElementsByClassName("rock");
   addImage[0].style.borderTop="1rem solid hsl(349, 71%, 52%)";
   addImage[0].style.borderBottom="1rem solid hsl(349, 70%, 56%)";
   addImage[0].style.borderRight="1rem solid hsl(349, 71%, 52%)";
   addImage[0].style.borderLeft="1rem solid hsl(349, 70%, 56%)";
- // addImage[0].style.borderRadius="10rem";
- // addImage[0].style.padding="2rem";
-  //addImage[0].style.backgroundColor="rgb(216, 216, 216)";
   addImage[0].innerHTML="<img src='rock.svg' alt='rock' width='65px' >";
  
  }
  function paperClick(){
-  image.style.visibility="hidden";
   userAns="paper";
   computerSuffle();
-  console.log(compare(userAns,computer1));
+  console.log(compare(userAns,computerAnswer));
   var addImage=document.getElementsByClassName("paper");
   addImage[0].style.borderTop="1rem solid hsl(230, 89%, 62%)";
   addImage[0].style.borderBottom="1rem solid hsl(230, 89%, 65%)";
   addImage[0].style.borderRight="1rem solid hsl(230, 89%, 62%)";
   addImage[0].style.borderLeft="1rem solid hsl(230, 89%, 65%)";
- // addImage[0].style.borderRadius="10rem";
- // addImage[0].style.padding="2rem";
- // addImage[0].style.backgroundColor="rgb(216, 216, 216)";
   addImage[0].innerHTML="<img src='paper.svg' alt='paper' width='60px'>";
  }
  function scissorClick(){
- image.style.visibility="hidden";
   userAns="scissor";
   computerSuffle();
-  console.log(compare(userAns,computer1));
+  console.log(compare(userAns,computerAnswer));
   var addImage=document.getElementsByClassName("scissor");
   addImage[0].style.borderTop="1rem solid hsl(39, 89%, 49%)  ";
   addImage[0].style.borderBottom="1rem solid hsl(40, 84%, 53%) ";
   addImage[0].style.borderRight="1rem solid hsl(39, 89%, 49%)  ";
   addImage[0].style.borderLeft="1rem solid hsl(40, 84%, 53%) ";
-  //addImage[0].style.borderRadius="10rem";
- // addImage[0].style.padding="2rem";
- // addImage[0].style.backgroundColor="rgb(216, 216, 216)";
   addImage[0].innerHTML="<img src='scissor.svg' alt='scissor' width='60px'>";
  }
  function compare(choice1,choice2){
-  again.innerHTML="<div class='again'> <button onclick='replay()'>Play again!</button></div>";
-  paper.classList.remove('hidden');
-  picked.classList.remove('hidden');
-  picked1.classList.remove('hidden');
+  image.style.visibility="hidden";
+  playAgain.innerHTML="<div class='again'> <button onclick='replay()'>Play again!</button></div>";
+  hideUser.classList.remove('hidden');
+  userChoice.classList.remove('hidden');
+  computerChoice.classList.remove('hidden');
+  hideRule.innerHTML=" ";
+  showRule.innerHTML=" ";
+ 
   if(choice1==choice2){
         score++;
         userScore.textContent=score;
-      ans.textContent= "The result is a tie!";
+        result.textContent= "The result is a tie!";
   }else{
   if(choice1=="rock"){
       if(choice2=="scissor"){
           
           score+=2;
           userScore.textContent=score;
-          ans.textContent= "YOU WIN";
+          result.textContent= "YOU WIN";
           
       }
       else{
          score--;
          userScore.textContent=score;
-         ans.textContent=  "YOU LOSE";
+         result.textContent=  "YOU LOSE";
       }
   }
   if(choice1=="paper"){
@@ -146,13 +138,13 @@ function rockClick(){
           
         score+=2;
         userScore.textContent=score;
-        ans.textContent=  "YOU WIN";
+        result.textContent=  "YOU WIN";
       }
       else{
         
         score--;
         userScore.textContent=score;
-       ans.textContent=  "YOU LOSE";
+        result.textContent=  "YOU LOSE";
       }
   }
   if(choice1=="scissor"){
@@ -160,30 +152,26 @@ function rockClick(){
           
         score+=2;
          userScore.textContent=score;
-        ans.textContent=  "YOU WIN";
+         result.textContent=  "YOU WIN";
       }
       else{
           
         score--;
         userScore.textContent=score;
-          ans.textContent=  "YOU LOSE";
+        result.textContent=  "YOU LOSE";
       }
   }
 }
  }
 function show(){
-    match.classList.add('hidden');
     image.classList.add('hidden');
-    hideRule.innerHTML=" <img src='icon-close.svg' alt='close-icon-img'>";
+    hideRule.innerHTML=" &times;";
     showRule.innerHTML="<div class='deco'> <h2>Rules</h2>  <br> <img src='image-rules.svg' alt='Rule-img' width='230px'> </div>";
-    
-    
 }
 
 function closeRule(){
-    match.classList.remove('hidden');
     image.classList.remove('hidden');
-    showRule.innerHTML="<div class='click'><span class='click1'>Rules</span></div>";
+    showRule.innerHTML="<div class='click'><span class='rule-img'>Rules</span></div>";
     hideRule.innerHTML="";
 }
 
@@ -197,11 +185,12 @@ document.addEventListener('keydown',function(e){
 })
 
   function replay(){
-    obj.innerHTML=" ";
-    ans.textContent=" ";
-    again.innerHTML=" ";
-    picked.classList.add('hidden');
-    picked1.classList.add('hidden');
-    paper.classList.add('hidden');
+    computerImage.innerHTML=" ";
+    result.textContent=" ";
+    playAgain.innerHTML=" ";
+    userChoice.classList.add('hidden');
+    computerChoice.classList.add('hidden');
+    hideUser.classList.add('hidden');
+    showRule.innerHTML="<div class='click'><span class='rule-img'>Rules</span></div>"
     image.style.visibility="visible";
   }
