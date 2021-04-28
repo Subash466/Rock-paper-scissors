@@ -175,8 +175,9 @@ function closeRule(){
     hideRule.innerHTML="";
 }
 
-showRule.addEventListener("click",show);
+showRule.addEventListener("mouseover",show);
 hideRule.addEventListener("click",closeRule);
+document.addEventListener("mouseout",closeRule);
 
 document.addEventListener('keydown',function(e){
   if (e.key=='Backspace' || e.key=='Escape'){
