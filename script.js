@@ -28,9 +28,10 @@ if (computer==0){
   pic.style.borderBottom="1rem solid hsl(349, 70%, 56%)";
   pic.style.borderRight="1rem solid hsl(349, 71%, 52%)";
   pic.style.borderLeft="1rem solid hsl(349, 70%, 56%)";
+  pic.style.marginTop="0.7rem";
   pic.style.borderRadius="10rem";
   pic.style.padding="2rem";
-  pic.style.width="170px";
+  pic.style.width="155px";
   pic.src = "rock.svg";
   pic.alt="rock";
   var add = document.getElementById("com-img");
@@ -44,8 +45,9 @@ if (computer==0){
   pic.style.borderRight="1rem solid hsl(39, 89%, 49%)  ";
   pic.style.borderLeft="1rem solid hsl(40, 84%, 53%) ";
   pic.style.borderRadius="10rem";
+  pic.style.marginTop="0.7rem";
   pic.style.padding="2rem";
-  pic.style.width="170px";
+  pic.style.width="150px";
   pic.src = "scissor.svg";
   pic.alt="scissor";
   var add = document.getElementById("com-img");
@@ -60,8 +62,9 @@ else{
   pic.style.borderRight="1rem solid hsl(230, 89%, 62%)";
   pic.style.borderLeft="1rem solid hsl(230, 89%, 65%)";
   pic.style.borderRadius="10rem";
+  pic.style.marginTop="0.7rem";
   pic.style.padding="2rem";
-  pic.style.width="170px";
+  pic.style.width="150px";
   pic.src = "paper.svg";
   pic.alt="paper";
   var add = document.getElementById("com-img");
@@ -78,10 +81,10 @@ function rockClick(){
   addImage[0].style.borderBottom="1rem solid hsl(349, 70%, 56%)";
   addImage[0].style.borderRight="1rem solid hsl(349, 71%, 52%)";
   addImage[0].style.borderLeft="1rem solid hsl(349, 70%, 56%)";
-  addImage[0].style.borderRadius="10rem";
-  addImage[0].style.padding="2rem";
-  addImage[0].style.backgroundColor="rgb(216, 216, 216)";
-  addImage[0].innerHTML="<img src='rock.svg' alt='rock' width='80px'>";
+ // addImage[0].style.borderRadius="10rem";
+ // addImage[0].style.padding="2rem";
+  //addImage[0].style.backgroundColor="rgb(216, 216, 216)";
+  addImage[0].innerHTML="<img src='rock.svg' alt='rock' width='65px' >";
  
  }
  function paperClick(){
@@ -94,10 +97,10 @@ function rockClick(){
   addImage[0].style.borderBottom="1rem solid hsl(230, 89%, 65%)";
   addImage[0].style.borderRight="1rem solid hsl(230, 89%, 62%)";
   addImage[0].style.borderLeft="1rem solid hsl(230, 89%, 65%)";
-  addImage[0].style.borderRadius="10rem";
-  addImage[0].style.padding="2rem";
-  addImage[0].style.backgroundColor="rgb(216, 216, 216)";
-  addImage[0].innerHTML="<img src='paper.svg' alt='paper' width='75px'>";
+ // addImage[0].style.borderRadius="10rem";
+ // addImage[0].style.padding="2rem";
+ // addImage[0].style.backgroundColor="rgb(216, 216, 216)";
+  addImage[0].innerHTML="<img src='paper.svg' alt='paper' width='60px'>";
  }
  function scissorClick(){
  image.style.visibility="hidden";
@@ -109,10 +112,10 @@ function rockClick(){
   addImage[0].style.borderBottom="1rem solid hsl(40, 84%, 53%) ";
   addImage[0].style.borderRight="1rem solid hsl(39, 89%, 49%)  ";
   addImage[0].style.borderLeft="1rem solid hsl(40, 84%, 53%) ";
-  addImage[0].style.borderRadius="10rem";
-  addImage[0].style.padding="2rem";
-  addImage[0].style.backgroundColor="rgb(216, 216, 216)";
-  addImage[0].innerHTML="<img src='scissor.svg' alt='scissor' width='75px'>";
+  //addImage[0].style.borderRadius="10rem";
+ // addImage[0].style.padding="2rem";
+ // addImage[0].style.backgroundColor="rgb(216, 216, 216)";
+  addImage[0].innerHTML="<img src='scissor.svg' alt='scissor' width='60px'>";
  }
  function compare(choice1,choice2){
   again.innerHTML="<div class='again'> <button onclick='replay()'>Play again!</button></div>";
@@ -172,7 +175,7 @@ function show(){
     match.classList.add('hidden');
     image.classList.add('hidden');
     hideRule.innerHTML=" <img src='icon-close.svg' alt='close-icon-img'>";
-    showRule.innerHTML="<div class='deco'> <h2>Rules</h2>  <br> <img src='image-rules.svg' alt='Rule-img'> </div>";
+    showRule.innerHTML="<div class='deco'> <h2>Rules</h2>  <br> <img src='image-rules.svg' alt='Rule-img' width='230px'> </div>";
     
     
 }

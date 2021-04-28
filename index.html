@@ -15,18 +15,20 @@
 <body>
   <div class="container">
   <div class=" header">
-  <div class="header-img"><img src="logo.svg" alt="logo-image" >
-  <div class="score">Score<br><span class="user-score "></span></div></div>
+  <div class="row center-block">
+  <div class="header-img col-md-12 col-sm-11 col-xs-10" ><img src="logo.svg" width="135px" height="105px" alt="logo-image" >
+  <div class="score col-md-1 col-sm-1 col-xs-2">Score<br><span class="user-score "></span></div></div>
   </div>
+</div>
 </div>
  <div class="section">
      
    <div class="container ">
-    <div class="row  justify-content-around match"> 
+    <div class="row center-block justify-content-around match"> 
       <div class="you hidden">YOU PICKED
-      <div id="user-img" class=" paper rock scissor" ></div></div>
-      <div class="comp hidden">THE HOUSE PICKED
-      <div id="com-img"></div></div>
+      <div id="user-img" class=" paper rock scissor " ></div></div>
+      <div class="comp hidden ">THE HOUSE PICKED
+      <div id="com-img" ></div></div>
       </div> 
     </div>
     <div class="ans"></div>
@@ -35,10 +37,10 @@
          <div class="again "></div></div></div>
 
 <div class="container">
-  <div class="row justify-content-around">
-  <div style="position: relative;">
+  <div class="row center-block justify-content-around">
+    <div style="position: relative;">
       <div class="image ">
-        <div class="image-bg"><img src="bg-triangle.svg" alt="background-image" width="400px"></div>
+        <div class="image-bg"><img src="bg-triangle.svg" alt="background-image" width="300px"></div>
         <img src='rock.svg' alt='rock' id="one"  onclick="rockClick()">
         <img src='paper.svg' alt='paper' id="two"   onclick="paperClick()" >
         <img src='scissor.svg' alt='scissor' id="three"  onclick="scissorClick()">
@@ -48,18 +50,11 @@
  </div>
 
  <div class="container">
-  <div class="row justify-content-around ">
+  <div class="row center-block justify-content-around ">
   <div class="icon-close "></div></div>
     <div class="click"><span class="click1">Rules</span></div>
   </div>
-</div>
-  
-
-
-  
-  
-
-
-  <script src="script.js"></script>
+</div> <script src="script.js"></script>
 </body>
 </html>
+  
