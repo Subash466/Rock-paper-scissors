@@ -175,7 +175,7 @@ function closeRule(){
     hideRule.innerHTML="";
 }
 
-showRule.addEventListener("mouseover",show);
+showRule.addEventListener("click",show);
 hideRule.addEventListener("click",closeRule);
 document.addEventListener("mouseout",closeRule);
 
