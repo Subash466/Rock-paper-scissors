@@ -191,10 +191,10 @@ showRule.addEventListener("click",show);
 hideRule.addEventListener("click",closeRule);
 
 document.addEventListener('keydown',function(e){
-    if (e.key=='Escape'){
-      closeRule();
-    }
-  })
+  if (e.key=='Backspace' || e.key=='Escape'){
+    closeRule();
+  }
+})
 
   function replay(){
     obj.innerHTML=" ";
