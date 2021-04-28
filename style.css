@@ -126,7 +126,7 @@ body{
    border: 0.2rem solid rgb(216, 216, 216);
    float: right;
    margin-top: 5rem;
-   margin-right: 6rem;
+  
    
 }
 .deco{
@@ -135,8 +135,6 @@ body{
   padding: 2rem;
   color: var(--headerOutline);
   border-radius: 1rem;
-  margin-left: auto;
-  margin-right: auto;
 }
 .icon-close{
   display: inline-flex;
@@ -162,5 +160,3 @@ body{
   padding: 0.5rem;
   border-radius: 0.5rem;
   color: rgb(228, 39, 39);
-
-}
