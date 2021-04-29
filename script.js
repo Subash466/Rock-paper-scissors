@@ -1,6 +1,5 @@
 'use-script'
 
-const body=document.querySelector(".body");
 const header=document.querySelector(".header");
 const userChoice=document.querySelector(".user-choice");
 const computerChoice=document.querySelector(".computer-choice");
@@ -15,7 +14,7 @@ const hideUser=document.querySelector(".paper");
 const userScore=document.querySelector(".user-score");
 
 
-let score=5;
+let score=4;
 userScore.textContent=score;
 let computerAnswer="";
 let userAns="";
@@ -190,7 +189,7 @@ function spockClick(){
   }else{
     if(choice1=="rock"){
       if(choice2=="lizard"){
-          score+=2;
+          score+=3;
           userScore.textContent=score;
           result.textContent= "YOU WIN!";
       }
@@ -202,7 +201,7 @@ function spockClick(){
   }
   if(choice1=="spock"){
     if(choice2=="scissor"){
-        score+=2;
+        score+=3;
         userScore.textContent=score;
         result.textContent= "YOU WIN!";
     }
@@ -213,7 +212,7 @@ function spockClick(){
     }
   } if(choice1=="lizard"){
     if(choice2=="spock"){
-      score+=2;
+      score+=3;
       userScore.textContent=score;
       result.textContent= "YOU WIN!";
     }
@@ -225,7 +224,7 @@ function spockClick(){
   }
   if(choice1=="paper"){
       if(choice2=="rock"){
-        score+=2;
+        score+=3;
         userScore.textContent=score;
         result.textContent=  "YOU WIN!";
       }
@@ -237,7 +236,7 @@ function spockClick(){
   }
   if(choice1=="scissor"){
       if(choice2=="paper"){
-         score+=2;
+         score+=3;
          userScore.textContent=score;
          result.textContent=  "YOU WIN!";
       }
@@ -252,7 +251,7 @@ function spockClick(){
 function show(){
     image.classList.add('hidden');
     hideRule.innerHTML=" &times;";
-    showRule.innerHTML="<div class='deco'> <h2>Rules:</h2> <p>i) Initially You get 5 points.<br>ii) For every Won get 2points,Draw get 1 point,Lose reduce 2 point.<br>iii)Score 10 points or above to won Game!.<br>iv) If points 0 (or) less than 0, your loss game!.<br><br> <img src='image-rules-bonus.svg'  alt='Rule-img' > </div>";
+    showRule.innerHTML="<div class='deco'> <h2>Rules:</h2> <p>i) Initially You get 4 points.<br>ii) For every Won get 3 points,Draw get 1 point,Lose reduce 2 point.<br>iii)Score 8 points or above to won Game!.<br>iv) If points 0 (or) less than 0, your loss game!.<br><br> <img src='image-rules-bonus.svg'  alt='Rule-img' > </div>";
 }
 
 function closeRule(){
@@ -287,24 +286,19 @@ document.addEventListener('keydown',function(e){
     result.style.fontSize="4rem";
     score=0;
     userScore.textContent=score;
-    body.style.backgroundImage="url('gameover.gif') ";
-    body.style.backgroundColor="rgb(167, 17, 17)";
-    body.style.backgroundRepeat="no-repeat";
-    body.style.backgroundPosition="center";
+    document.body.style.background="rgb(167, 17, 17) url('gameover.gif') no-repeat  center"
     playAgain.innerHTML="<div class='again'> <button onclick='restart()'>Restart Game!</button></div> ";
     userChoice.classList.add('hidden');
     computerChoice.classList.add('hidden');
     showRule.innerHTML="";
     header.style.border="0";
     }
-    if(score>=10){
-      result.textContent="Congratulations 👏  You Won game!";
+    if(score>=8){
+      result.innerHTML="Congratulations 👏<br>You Won game!";
       result.style.fontSize="2.7rem";
-      score=10;
+      score=8;
       userScore.textContent=score;
-      body.style.backgroundImage="url('winner.gif') ";
-      body.style.backgroundColor="rgb(17, 128, 17)";
-      body.style.backgroundRepeat="no-repeat";
+      document.body.style.background="rgb(17, 128, 17) url('winner.gif') no-repeat center top";
       playAgain.innerHTML="<div class='again'> <button onclick='restart()'>Restart Game!</button></div> ";
       userChoice.classList.add('hidden');
       computerChoice.classList.add('hidden');
@@ -320,7 +314,8 @@ document.addEventListener('keydown',function(e){
   score=5;
   userScore.textContent=score;
   showRule.style.visibility="visible";
-  body.style.backgroundImage="linear-gradient(to right, hsl(214, 47%, 23%) , hsl(237, 49%, 15%))";
+  showRule.innerHTML="<div class='click'><span class='rule-img'>Rules</span></div>";
+  document.body.style.background="linear-gradient(to right, hsl(214, 47%, 23%) , hsl(237, 49%, 15%))";
   userChoice.classList.add('hidden');
   computerChoice.classList.add('hidden');
   hideUser.classList.add('hidden');

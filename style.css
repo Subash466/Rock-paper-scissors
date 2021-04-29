@@ -212,13 +212,13 @@ body{
   }  
   .score {
     font-size: 1.2rem;
-    max-width: 70px;
-    max-height: 85px;
+    max-width: 75px;
+    min-height: 95px;
     padding: 0.5rem;
   }
   #header-img{
     max-width: 90px;
-    max-height: 80px;
+    max-height: 95px;
   }
   .user-score{
    font-size: 2rem;
