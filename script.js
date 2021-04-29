@@ -263,7 +263,7 @@ function closeRule(){
 
 showRule.addEventListener("click",show);
 hideRule.addEventListener("click",closeRule);
-document.addEventListener("mouseout",closeRule);
+
 
 document.addEventListener('keydown',function(e){
   if (e.key=='Backspace' || e.key=='Escape'){

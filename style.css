@@ -182,7 +182,7 @@ body{
   font-size: 3.2rem;
   color: var(--headerOutline);
   margin:0.8rem;
-  margin-left: 15rem;
+  margin-left: 19rem;
   
   
 }
@@ -222,6 +222,9 @@ body{
   }
   .user-score{
    font-size: 2rem;
+  }
+  .icon-close{
+    margin-left:0;
   }
 } 
 
