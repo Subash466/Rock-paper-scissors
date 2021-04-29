@@ -10,23 +10,19 @@
   --headerOutline: hsl(217, 16%, 45%);
 }
 body{
-  
   font-family: 'Barlow Semi Condensed', sans-serif;
   background-image: linear-gradient(to right, hsl(214, 47%, 23%) , hsl(237, 49%, 15%));
  
 }
+
 .header{
-  background-image:  linear-gradient(to right, hsl(214, 47%, 23%) , hsl(237, 49%, 15%));
   border: 0.5rem solid var(--headerOutline);
-  margin: 1rem;
   border-radius: 1rem;
-  
+  margin-right: 10rem;
+  margin-left: 10rem;
 }
 .header-img{
-  
-  padding: 2rem;
-  
- 
+   padding: 2rem; 
 }
 .score{
   float: right;
@@ -36,12 +32,13 @@ body{
   border-radius: 0.5rem;
   text-align: center;
   color:var(--scoreText) ;
-  max-width: 100px;
+  max-width: 120px;
 }
 .user-score{
   color: var(--darkText);
-  font-size: 2.5rem;
+  font-size: 3.5rem;
 }
+
 .section{
   margin-top: 3rem;
 }
@@ -77,7 +74,7 @@ body{
 }
 
 #rock{
-  padding: 2rem;
+  padding: 1.2rem;
   border-radius: 10rem;
   border-top: 1rem solid hsl(349, 71%, 52%);
   border-bottom:1rem solid hsl(349, 70%, 56%);
@@ -85,14 +82,46 @@ body{
   border-left:1rem solid hsl(349, 70%, 56%);
   background-color: rgb(216, 216, 216);
   position:absolute;
-  top: -26px;
-  left: -14px;
+  top: -45px;
+  left: 90px;
   z-index: 2;
+  width: 115px;
+  height:115px ;
+}
+#spock{
+  padding: 1.2rem;
+  border-radius: 10rem;
+  border-top: 1rem solid hsl(189, 59%, 53%);
+  border-bottom:1rem solid hsl(189, 58%, 57%);
+  border-right: 1rem solid hsl(189, 59%, 53%);
+  border-left:1rem solid hsl(189, 58%, 57%);
+  background-color: rgb(216, 216, 216);
+  position:absolute;
+  top: 56px;
+  left: -30px;
+  z-index: 2;
+  width: 115px;
+  height:115px ;
+
+}
+#lizard{
+  padding: 1.2rem;
+  border-radius: 10rem;
+  border-top: 1rem solid hsl(261, 73%, 60%);
+  border-bottom:1rem solid hsl(261, 72%, 63%);
+  border-right: 1rem solid hsl(261, 73%, 60%);
+  border-left:1rem solid hsl(261, 72%, 63%);
+  background-color: rgb(216, 216, 216);
+  position:absolute;
+  bottom: -60px;
+  left: 10px;
+  z-index: 2;
+  width: 115px;
+  height:115px ;
 
 }
 #paper{
-  width: 135px;
-  padding: 2rem;
+  padding: 1.2rem;
   border-radius: 10rem;
   border-top: 1rem solid hsl(230, 89%, 62%);
   border-bottom:1rem solid hsl(230, 89%, 65%);
@@ -100,23 +129,26 @@ body{
   border-left: 1rem solid hsl(230, 89%, 65%);
   background-color: rgb(216, 216, 216);
   position:absolute;
-  top: -26px;
-  right: -20px;
+  top: 56px;
+  right: -39px;
   z-index: 2;
+  width: 115px;
+  height:115px ;
 }
 #scissor{
-  width: 135px;
   border-radius: 10rem;
-  padding: 2rem;
+  padding: 1.2rem;
   border-top:1rem solid hsl(39, 89%, 49%);
   border-bottom:1rem solid hsl(40, 84%, 53%) ;
   border-right: 1rem solid hsl(39, 89%, 49%) ;
   border-left: 1rem solid hsl(40, 84%, 53%) ;
   background-color: rgb(216, 216, 216);
   position:absolute;
-  bottom: -50px;
-  left: 100px;
+  bottom: -60px;
+  left: 170px;
   z-index: 2;
+  width: 115px;
+  height:115px ;
 }
 .rule-img{
    color: rgb(216, 216, 216);
@@ -126,23 +158,33 @@ body{
    border: 0.2rem solid rgb(216, 216, 216);
    float: right;
    margin-top: 5rem;
-  
    
 }
+
+
+
 .deco{
   display: table;
   background-color: rgb(245, 245, 245);
   padding: 2rem;
   color: var(--headerOutline);
   border-radius: 1rem;
+  max-width: 210px;
 }
+.deco img{
+  max-width: 250px;
+}
+
+
 .icon-close{
   display: inline-flex;
-  position: fixed;
+  position: absolute;
   font-size: 3.2rem;
   color: var(--headerOutline);
   margin:0.8rem;
-  margin-left: 14rem;
+  margin-left: 15rem;
+  
+  
 }
 .result{
   font-size: 2rem;
@@ -159,3 +201,36 @@ body{
   padding: 0.5rem;
   border-radius: 0.5rem;
   color: rgb(228, 39, 39);
+}
+@media screen and (max-width: 450px) {
+  .header{
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .header-img{
+    padding: 1.5rem;
+  }  
+  .score {
+    font-size: 1.2rem;
+    max-width: 70px;
+    max-height: 85px;
+    padding: 0.5rem;
+  }
+  #header-img{
+    max-width: 90px;
+    max-height: 80px;
+  }
+  .user-score{
+   font-size: 2rem;
+  }
+} 
+
+@media screen and (min-width: 450px) {
+  .rule-img {
+    margin-left:80rem;
+  }
+  .deco img{
+    max-width: 380px;
+  }
+ 
+}
