@@ -1,5 +1,5 @@
 'use-script'
-
+// selectors
 const header=document.querySelector(".header");
 const userChoice=document.querySelector(".user-choice");
 const computerChoice=document.querySelector(".computer-choice");
@@ -43,6 +43,7 @@ function Click(){
   compare(userAns,computerAnswer);
   showResult(score);
  }
+ //events
 document.getElementById("rock").addEventListener("click",()=>{ //for rock-click
   userAns="rock";
   Click();
